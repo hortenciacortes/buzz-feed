@@ -1,1 +1,34 @@
-<p>quizz works!</p>
+<section>
+  <div
+    *ngIf="questionCurrent$ | async as data"
+    class="current-question"
+  >
+    <div class="question">
+      <p>{{ data?.question }}</p>
+    </div>
+
+    <div
+      *ngIf="data.options.length > 1"
+      class="answers">
+      <button
+        *ngFor="let option of data?.options"
+        (click)="handleAnswers(option)"
+      >
+        {{ option?.name }}
+      </button>
+    </div>
+  </div>
+
+  <div
+    *ngIf="resultMessage$ | async as result"
+    class="end-game"
+  >
+    <h3>
+      {{ result }}
+    </h3>
+
+    <button (click)="startQuestions()">Iniciar Jogo</button>
+  </div>
+</section>
+
+

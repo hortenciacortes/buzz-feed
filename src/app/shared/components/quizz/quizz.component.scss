@@ -1,0 +1,51 @@
+section {
+  margin: 80px 0px;
+
+  button {
+    width: 150px;
+    padding: 20px;
+    border-radius: 8px;
+
+    &:hover, &.active {
+      background-color: rgb(54, 23, 88);
+      cursor: pointer;
+    }
+  }
+
+  .current-question {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .answers {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+
+    button {
+      border: 1px solid rgb(67, 28, 112);
+      background-color: transparent;
+
+    }
+  }
+
+  .end-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  button {
+    background-color: rgb(67, 28, 112);
+    border: none;
+  }
+}
